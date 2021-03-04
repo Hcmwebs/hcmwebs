@@ -1,27 +1,13 @@
+@use 'abstracts/fonts';
+@use 'abstracts/colors';
 
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  width: 100%;
- height: 100vh;
- background-color: #ccc;
-}
-header{
-  width: 80%;
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: blue;
-}
-.container{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
+
+body {
+  font-size: fonts.$font-size;
+  color: colors.$red;
 }
