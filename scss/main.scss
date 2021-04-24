@@ -1,13 +1,2 @@
-@use 'abstracts/fonts';
-@use 'abstracts/colors';
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-size: fonts.$font-size;
-  color: colors.$red;
-}
+@use 'abstracts';
+@use 'components';
