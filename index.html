@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/3d8fef6148.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/normalise.css">
     <link rel="stylesheet" href="/css/styles.css" />
     <title>Hcmwebs | Portfolio</title>
@@ -14,17 +15,23 @@
           <div class="logo">
             <img src="images/logo.png" alt="hcmwebs-logo" class = 'img'/>
           </div>
-          <ul class="navBar open">
-            <li><a href="#" class="active">Home</a></li>
+          <ul class="navBar" id="navBar">
+            <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#tools">Tools</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-          <!-- <div class="hamburgerIcon">
-            <span class="Open"></span>
-            <span class="close"></span>
-          </div> -->
+          <div class="hamburger " id="hamburger">
+            <button class="btn" id="btnOpen">
+              <i class="fal fa-bars fa-2x"></i>
+            </button>
+            <button class="btn btn-secondary" id="btnClose">
+              <i class="fal fa-times fa-2x"></i>
+            </button>
+
+
+          </div>
         </nav>
         <!-- <div class="heroText">
           <h1>Hi, I am Heze.</h1>

@@ -3,7 +3,6 @@
 .nav {
   width: 100%;
   min-height:10vh;
-  padding: 2rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -13,6 +12,7 @@
 
   .logo {
     width: 150px;
+    z-index: 99;
 
     img {
       width: 100%;
@@ -26,15 +26,18 @@
     height: 100vh;
     list-style: none;
     position: absolute;
-    top:0;
-    right:-120%;
+    top:100%;
+    left:-100%;
+    border-radius: $borderRadiusNavBar;
     @include flex(column,center,center);
-    transition: all 0.6s ease-in-out;
+    transition: $transitionNavBar;
     background-color: $primary-500;
 
 
     &.open {
-      right: 0%;
+      bottom: 0;
+      left: 0;
+      border-radius: 0;
       backdrop-filter: blur(0.5rem);
     }
 
@@ -43,14 +46,16 @@
       font-weight: 300;
       font-size: 1.125rem;
       text-align: center;
+      @include grid(center);
 
       a {
-        width: 100%;
+        width: 80%;
         display: block;
         padding: 0.75rem 1.5rem;
         text-decoration: none;
         color: $white;
         position: relative;
+
 
         &::before {
           content: '';
@@ -61,7 +66,7 @@
           height: 0.0625rem;
           transform: translateY(0);
           background-color: $secondary-500;
-          transition: all 0.6s ease-in-out;
+          transition: $transition-2;
         }
 
         &:hover::before {
@@ -84,23 +89,39 @@
 
 
   .hamburger {
-    font-weight: 300;
+    cursor: pointer;
     display: block;
     position: absolute;
-    top: 50%;
-    right: 4rem;
-    transform: translateY(-50%);
+    top: 10%;
+    right: 1.3rem;
+    transform: translateY(-10%);
     transition: all 0.6s ease-in-out;
 
-    &.open {
-      top: 25%;
-      transform: rotate(180deg) translateY(-25%);
+    .btn{
+      color:$white;
     }
+
+    .btn-secondary{
+      color:$secondary-500;
+      display:none;
+    }
+
+    &.open{
+      .btnOpen{
+        display: none;
+      }
+
+      .btnClose{
+        display:block;
+      }
+    }
+
   }
 }
 @media (min-width: $tablet) {
   .nav {
     flex-direction: row;
+    padding: 2rem;
 
     .navBar {
       max-width: 600px;
