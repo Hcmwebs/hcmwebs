@@ -3,20 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/normalise.css">
+    <link rel="stylesheet" href="/css/styles.css" />
     <title>Hcmwebs | Portfolio</title>
   </head>
   <body>
     <div class="container">
       <header>
-        <a href="#"><img src="Images/logo.png" alt="hcmwebs-logo" /></a>
+        <nav class="nav">
+          <div class="logo">
+            <img src="images/logo.png" alt="hcmwebs-logo" class = 'img'/>
+          </div>
+          <ul class="navbar">
+            <li><a href=""></a>Home</li>
+            <li><a href=""></a>about</li>
+            <li><a href=""></a>projects</li>
+            <li><a href=""></a>tools</li>
+            <li><a href=""></a>contact</li>
+          </ul>
+          <div class="hamburgerIcon">
+            <span class="Open"></span>
+            <span class="close"></span>
+
+
+          </div>
+        </nav>
+        <div class="heroText">
+          <h1>Hi, I am Heze.</h1>
+          <div class="subtitle">
+            <p>I am a Designer</p>
+            <p>I am a Designer</p>
+            <h2>Welcome to my Website</h2>
+            <a href="#aboutMe" class= 'btn'> About Me</a>
+          </div>
+        </div>
       </header>
       <main>
-        <section></section>
-        <section></section>
-        <section></section>
+        <section class = 'section--about' id = 'aboutme'><h1>About me</h1></section>
+        <section class = 'section--projects' id = 'projects'><h1>Projects</h1></section>
+        <section class = 'section--tools' id = 'tools'><h1>Tools</h1></section>
+        <section class = 'section--contact' id = 'contacts'><h1>Contacts</h1></section>
       </main>
-      <footer></footer>
+      <footer class = 'footer'>
+        <div class="footerLinks">
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+        </div>
+      </footer>
     </div>
     <script src="js/main.js"></script>
   </body>

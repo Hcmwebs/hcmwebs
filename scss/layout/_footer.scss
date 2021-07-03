@@ -1,0 +1,33 @@
+@use '../abstracts/' as *;
+@use '../components/' as *;
+
+.footer {
+  width: 100%;
+  min-height: 2vh;
+  padding: 3rem 0;
+  position: fixed;
+  bottom: 0;
+  @include grid(center);
+  background-color: $bgColor;
+
+  &__links {
+    width: 80%;
+    max-width: 400px;
+    @include flex(row, center, center);
+    gap: 1rem;
+
+    a {
+      cursor: pointer;
+      border-radius: $borderRadius;
+      @include grid(center);
+      transition: all 0.6s ease-in-out;
+
+      &:hover {
+        color: $secondaryColor;
+        background-color: darken($bgColor, 5);
+        box-shadow: $boxShadowHover;
+        transform: scale(1.1);
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+@use '../abstracts/' as *;
+
+.nav {
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $bgColor;
+  @include flex(column, space-between, center);
+  z-index: 9;
+
+  .logo {
+    width: 150px;
+    padding: 2rem;
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    @include grid(center);
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  .navBar {
+    width: 100%;
+    height: 100vh;
+    padding: 2rem 0;
+    list-style: none;
+    @include flex(column, center, center);
+    position: absolute;
+    top: 0;
+    right: -100%;
+    background-color: $bgColor;
+    transition: all 0.6s ease-in-out;
+
+    &.open {
+      right: 0%;
+      filter: opacity(0.9);
+      backdrop-filter: blur(0.8rem);
+    }
+
+    li {
+      width: 80%;
+      font-weight: 300;
+      font-size: 1.8rem;
+      margin: 0.5rem auto;
+      text-align: center;
+
+      a {
+        width: 100%;
+        display: block;
+        padding: 1.2rem 2.4rem;
+        text-decoration: none;
+        color: $secondaryTextColor;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          height: 0.2rem;
+          transform: translateY(0.5rem);
+          background-color: $secondaryColor;
+          transition: all 0.6s ease-in-out;
+        }
+
+        &:hover::before {
+          width: 100%;
+        }
+
+        &.active::before {
+          width: 100%;
+          height: 0.3rem;
+
+          &:hover {
+            width: 100%;
+            height: 0.3rem;
+          }
+        }
+      }
+    }
+  }
+
+  .hamburger {
+    font-family: $fontStack;
+    font-weight: 300;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 4rem;
+    transform: translateY(-50%);
+
+    transition: all 0.6s ease-in-out;
+
+    &.open {
+      top: 25%;
+      transform: rotate(180deg) translateY(-25%);
+    }
+  }
+}
+@media (min-width: $tablet) {
+  .nav {
+    flex-direction: row;
+
+    .navBar {
+      max-width: 600px;
+      height: 100%;
+      right: 0;
+      flex-direction: row;
+
+      li {
+        width: auto;
+      }
+    }
+
+    .hamburger {
+      display: none;
+    }
+  }
+}

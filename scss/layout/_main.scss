@@ -1,0 +1,17 @@
+@use '../abstracts/' as *;
+@use '../pages/' as *;
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 3rem 0;
+  @include grid(center);
+  grid-template-columns: 1fr;
+  gap: 10rem;
+
+  section {
+    min-height: 40vh;
+    margin: 10rem auto;
+  }
+}

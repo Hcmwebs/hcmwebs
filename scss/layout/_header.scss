@@ -1,0 +1,109 @@
+@use '../abstracts/' as *;
+
+.header {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  @include flex(row, center, center);
+  background-color: $white;
+
+  .heroText {
+    width: 90%;
+    max-width: 500px;
+    padding: 3rem;
+    border: none;
+    border-radius: $borderRadius;
+    @include flex(column, space-between, center);
+    color: $textColor;
+    background-color: $backgroundColor;
+
+    h1 {
+      font-family: $headerFont;
+      font-size: clamp(4rem, 3vw, 7rem);
+      font-weight: 300;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+      text-align: center;
+      width: max-content;
+      position: relative;
+
+      &:before,
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+      }
+      &:before {
+        background-color: $secondaryTextColor;
+        animation: typewriter $typewriterSpeed steps($typewriterCharacters) 1s
+          forwards;
+      }
+      &::after {
+        width: 0.125em;
+        background: $primaryTextColor;
+        animation: typewriter $typewriterSpeed steps($typewriterCharacters) 1s
+            forwards,
+          blink 1s steps($typewriterCharacters) infinite;
+      }
+
+      span {
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        color: $secondaryColor;
+      }
+    }
+
+    .subtitle {
+      @include grid(center);
+      gap: 0.5rem;
+
+      h2 {
+        font-size: clamp(2rem, 2vw, 4rem);
+        font-weight: 300;
+        padding: 1rem 2rem;
+        text-align: center;
+        transform: translateY(2rem);
+        opacity: 0;
+        animation: fadeInUp 2s ease ($typewriterSpeed)+9s forwards;
+      }
+
+      a {
+        font-weight: 300;
+        padding: 1.2rem 2.4rem;
+        border-radius: $borderRadius;
+        border: none;
+        color: $secondaryTextColor;
+        background-color: $secondaryColor;
+        box-shadow: $boxShadow;
+        transition: all 0.6s ease-in-out;
+        transform: translateY(2rem);
+        opacity: 0;
+        animation: fadeInUp 2s ease ($typewriterSpeed)+9s forwards;
+
+        &:focus,
+        &:hover {
+          box-shadow: $boxShadowHover;
+          background-color: darken($secondaryColor, 25);
+          transform: scale(1.1);
+        }
+      }
+
+      p {
+        font-size: 1.7rem;
+        font-weight: 300;
+        transform: translateY(2rem);
+        opacity: 0;
+        animation: fadeInUp 2s ease $typewriterSpeed forwards;
+
+        &.first {
+          animation-delay: ($typewriterSpeed + 3s);
+        }
+
+        &.second {
+          animation-delay: ($typewriterSpeed + 6s);
+        }
+      }
+    }
+  }
+}
