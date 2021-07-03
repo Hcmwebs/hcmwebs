@@ -1,4 +1,4 @@
-@use'../abstracts'as *;
+@use'../abstracts/' as *;
 /* buttons */
 .btn {
   cursor: pointer;
@@ -39,10 +39,10 @@
 }
 
 .alert-errors {
-  color: $red-dark;
-  background: $red-light;
+  color: $error;
+  background: $errorLight;
 }
 .alert-success {
-  color: $green-dark;
-  background: $green-light;
+  color: $success;
+  background: $successLight;
 }

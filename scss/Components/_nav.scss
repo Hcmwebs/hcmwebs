@@ -3,16 +3,16 @@
 .nav {
   width: 100%;
   height: 10vh;
+  padding: 2rem;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: $bgColor;
+  background-color: $primary-500;
   @include flex(column, space-between, center);
   z-index: 9;
 
   .logo {
     width: 150px;
-    padding: 2rem;
     position: absolute;
     left: 2rem;
     top: 50%;
@@ -27,15 +27,13 @@
   }
 
   .navBar {
-    width: 100%;
     height: 100vh;
-    padding: 2rem 0;
     list-style: none;
     @include flex(column, center, center);
     position: absolute;
     top: 0;
     right: -100%;
-    background-color: $bgColor;
+    background-color: $backgroundColor;
     transition: all 0.6s ease-in-out;
 
     &.open {
@@ -56,7 +54,7 @@
         display: block;
         padding: 1.2rem 2.4rem;
         text-decoration: none;
-        color: $secondaryTextColor;
+        color: $textColor;
         position: relative;
 
         &::before {
@@ -67,7 +65,7 @@
           width: 0%;
           height: 0.2rem;
           transform: translateY(0.5rem);
-          background-color: $secondaryColor;
+          background-color: $secondary-500;
           transition: all 0.6s ease-in-out;
         }
 
@@ -89,14 +87,12 @@
   }
 
   .hamburger {
-    font-family: $fontStack;
     font-weight: 300;
     display: block;
     position: absolute;
     top: 50%;
     right: 4rem;
     transform: translateY(-50%);
-
     transition: all 0.6s ease-in-out;
 
     &.open {

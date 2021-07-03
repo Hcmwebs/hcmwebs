@@ -1,15 +1,16 @@
 @use '../abstracts/' as *;
+@use '../components/' as *;
 
 .header {
   width: 100%;
   min-height: 100vh;
   margin: 0 auto;
   @include flex(row, center, center);
-  background-color: $white;
+  background-color: $backgroundColor;
 
   .heroText {
     width: 90%;
-    max-width: 500px;
+    max-width: $fixedWidth;
     padding: 3rem;
     border: none;
     border-radius: $borderRadius;
@@ -34,13 +35,13 @@
         inset: 0;
       }
       &:before {
-        background-color: $secondaryTextColor;
+        background-color: $textColor;
         animation: typewriter $typewriterSpeed steps($typewriterCharacters) 1s
           forwards;
       }
       &::after {
         width: 0.125em;
-        background: $primaryTextColor;
+        background: $backgroundColor;
         animation: typewriter $typewriterSpeed steps($typewriterCharacters) 1s
             forwards,
           blink 1s steps($typewriterCharacters) infinite;
@@ -50,7 +51,7 @@
         font-family: inherit;
         font-size: inherit;
         font-weight: inherit;
-        color: $secondaryColor;
+        color: $secondary-500;
       }
     }
 
@@ -73,9 +74,9 @@
         padding: 1.2rem 2.4rem;
         border-radius: $borderRadius;
         border: none;
-        color: $secondaryTextColor;
-        background-color: $secondaryColor;
-        box-shadow: $boxShadow;
+        color: $textColor;
+        background-color: $secondary-500;
+        box-shadow: $shadow-1;
         transition: all 0.6s ease-in-out;
         transform: translateY(2rem);
         opacity: 0;
@@ -83,8 +84,8 @@
 
         &:focus,
         &:hover {
-          box-shadow: $boxShadowHover;
-          background-color: darken($secondaryColor, 25);
+          box-shadow: $shadow-2;
+          background-color: darken($textColor, 25);
           transform: scale(1.1);
         }
       }

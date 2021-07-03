@@ -11,10 +11,18 @@
   $backgroundColor:$grey-50;
   $textColor: $grey-900;
   $white: $grey-50;
+
+  $errorLight:$secondary-400;
+  $error: $secondary-600;
+  $successLight: $primary-400;
+  $success: $primary-600;
+
+
   $borderRadius: 0.25rem;
   $letterSpacing: 1px;
   $transition: 0.3s ease-in-out all;
   $maxWidth: 1440px;
   $fixedWidth: 600px;
-  $typeWriterSpeed: 4s;
-  $typeWriterCharacters: 15;
+
+  $typewriterSpeed: 4s;
+  $typewriterCharacters: 15;

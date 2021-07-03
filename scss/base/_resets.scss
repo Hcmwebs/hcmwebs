@@ -1,5 +1,5 @@
-@use '../abstracts' as *;
-@use'./typo' as *;
+@use'../abstracts/' as *;
+@use './typo' as *;
 @use '../layout/' as *;
 @use '../components' as *;
 @use '../pages' as *;
@@ -9,6 +9,6 @@
   box-sizing: border-box;
 }
 .container{
-  width: 90%;
+  width: 100%;
   max-width:$maxWidth;
 }

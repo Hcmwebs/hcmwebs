@@ -4,7 +4,7 @@
 .form {
   width: 90vw;
   max-width: $fixedWidth;
-  background: $white;
+  background-color: $backgroundColor;
   border-radius: $borderRadius;
   box-shadow: $shadow-2;
   padding: 2rem 2.5rem;
@@ -38,7 +38,7 @@
   color: $grey-400;
 }
 .form-alert {
-  color: $red-dark;
+  color: $error;
   letter-spacing: $letterSpacing;
   text-transform: capitalize;
 }
