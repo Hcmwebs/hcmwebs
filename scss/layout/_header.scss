@@ -4,8 +4,7 @@
 .header {
   width: 100%;
   min-height: 100vh;
-  margin: 0 auto;
-  @include flex(row, center, center);
+  @include flex(column, center, center);
   background-color: $backgroundColor;
 
   .heroText {

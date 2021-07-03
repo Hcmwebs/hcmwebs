@@ -93,31 +93,26 @@ a {
 
 ul {
   list-style-type: none;
+  margin: 0;
   padding: 0;
 }
 
 .nav {
   width: 100%;
-  height: 10vh;
+  min-height: 10vh;
   padding: 2rem;
   position: fixed;
   top: 0;
   left: 0;
   background-color: #1d8a96;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   z-index: 9;
 }
 .nav .logo {
   width: 150px;
-  position: absolute;
-  left: 2rem;
-  top: 50%;
-  transform: translateY(-50%);
-  display: grid;
-  place-items: center;
 }
 .nav .logo img {
   width: 100%;
@@ -125,36 +120,35 @@ ul {
   object-fit: cover;
 }
 .nav .navBar {
+  width: 100vw;
   height: 100vh;
   list-style: none;
+  position: absolute;
+  top: 0;
+  right: -120%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0;
-  right: -100%;
-  background-color: white;
   transition: all 0.6s ease-in-out;
+  background-color: #1d8a96;
 }
 .nav .navBar.open {
   right: 0%;
-  filter: opacity(0.9);
-  backdrop-filter: blur(0.8rem);
+  backdrop-filter: blur(0.5rem);
 }
 .nav .navBar li {
-  width: 80%;
+  width: 100%;
   font-weight: 300;
-  font-size: 1.8rem;
-  margin: 0.5rem auto;
+  font-size: 1.125rem;
   text-align: center;
 }
 .nav .navBar li a {
   width: 100%;
   display: block;
-  padding: 1.2rem 2.4rem;
+  padding: 0.75rem 1.5rem;
   text-decoration: none;
-  color: #010404;
+  color: white;
   position: relative;
 }
 .nav .navBar li a::before {
@@ -162,9 +156,9 @@ ul {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 0%;
-  height: 0.2rem;
-  transform: translateY(0.5rem);
+  width: 0;
+  height: 0.0625rem;
+  transform: translateY(0);
   background-color: #e04e3e;
   transition: all 0.6s ease-in-out;
 }
@@ -173,11 +167,11 @@ ul {
 }
 .nav .navBar li a.active::before {
   width: 100%;
-  height: 0.3rem;
+  height: 0.125rem;
 }
 .nav .navBar li a.active::before:hover {
   width: 100%;
-  height: 0.3rem;
+  height: 0.25rem;
 }
 .nav .hamburger {
   font-weight: 300;
@@ -334,9 +328,8 @@ ul {
 .header {
   width: 100%;
   min-height: 100vh;
-  margin: 0 auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: white;
@@ -486,6 +479,8 @@ ul {
 .container {
   width: 100%;
   max-width: 1440px;
+  display: grid;
+  place-items: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
