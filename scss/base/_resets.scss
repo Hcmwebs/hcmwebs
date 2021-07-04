@@ -1,8 +1,6 @@
 @use'../abstracts/' as *;
 @use './typo' as *;
 @use '../layout/' as *;
-@use '../components' as *;
-@use '../pages' as *;
 *,
 ::after,
 ::before {

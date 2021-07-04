@@ -1,2 +1,52 @@
 @use '../abstracts/' as *;
 @use '../components/' as *;
+
+.section--about{
+  width: 100%;
+  min-height:60vh;
+  background-color: $primary-300;
+  @include grid(center);
+
+  .card{
+    width: 100%;
+    padding: 2rem 0;
+    border-radius:$borderRadius;
+    background-color: $primary-100;
+    @include flex(column,space-between, center);
+    gap:2rem;
+
+    &__header{
+      width: 90%;
+      max-width:$fixedWidth;
+      min-height: 50vh;
+      @include grid(center);
+
+      .imgContainer{
+        width: 90%;
+        @include grid(center);
+
+
+        .img{
+          border-radius: 50%;
+          border: 0.25rem solid $secondary-500;
+        }
+      }
+
+
+    }
+    &__body{
+      width: 100%;
+      max-width:$fixedWidth;
+      min-height: 50vh;
+
+      p{
+        max-width: $fixedWidth;
+        margin-top: 1rem;
+        padding: 0 1rem;
+        text-align: center;
+      }
+    }
+  }
+
+}
+

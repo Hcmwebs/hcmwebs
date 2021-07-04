@@ -4,13 +4,14 @@
 .main {
   width: 100%;
   min-height: 100vh;
-  margin: 0 auto;
+  margin-top: 3rem;
   padding: 3rem 0;
   @include grid(center);
-  grid-template-columns: 1fr;
-  gap: 10rem;
+  gap: 5rem;
 
-  section {
+  .section {
     min-height: 40vh;
   }
+
 }
+
