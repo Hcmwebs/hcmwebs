@@ -45,6 +45,7 @@ body {
   font-weight: 400;
   line-height: 1.75;
   color: #010404;
+  scroll-behavior: smooth;
 }
 
 p {
@@ -351,22 +352,22 @@ ul {
 .header .heroText {
   width: 90%;
   max-width: 600px;
-  padding: 3rem;
+  padding: 3rem 0rem;
   border: none;
   border-radius: 0.25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  gap: 0.5rem;
   color: #010404;
   background-color: white;
 }
 .header .heroText h1 {
   font-family: "Poppins", monospace;
-  font-size: clamp(4rem, 3vw, 7rem);
+  font-size: clamp(3rem, 3vw, 6rem);
   font-weight: 300;
   margin: 0 auto;
-  margin-bottom: 1rem;
   text-align: center;
   width: max-content;
   position: relative;
@@ -377,12 +378,12 @@ ul {
   inset: 0;
 }
 .header .heroText h1:before {
-  background-color: #010404;
+  background-color: white;
   animation: typewriter 4s steps(15) 1s forwards;
 }
 .header .heroText h1::after {
-  width: 0.125em;
-  background: white;
+  width: 0.25rem;
+  background: #010404;
   animation: typewriter 4s steps(15) 1s forwards, blink 1s steps(15) infinite;
 }
 .header .heroText h1 span {
@@ -407,10 +408,10 @@ ul {
 }
 .header .heroText .subtitle a {
   font-weight: 300;
-  padding: 1.2rem 2.4rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 0.25rem;
   border: none;
-  color: #010404;
+  color: white;
   background-color: #e04e3e;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   transition: all 0.6s ease-in-out;
@@ -420,7 +421,7 @@ ul {
 }
 .header .heroText .subtitle a:focus, .header .heroText .subtitle a:hover {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  background-color: black;
+  background-color: #882f25;
   transform: scale(1.1);
 }
 .header .heroText .subtitle p {
