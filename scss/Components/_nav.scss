@@ -26,18 +26,16 @@
     height: 100vh;
     list-style: none;
     position: absolute;
-    top:100%;
-    left:-100%;
-    border-radius: $borderRadiusNavBar;
+    top:0;
+    right:-100%;
     @include flex(column,center,center);
-    transition: $transitionNavBar;
+    transition: $transition;
     background-color: $primary-500;
 
 
     &.open {
       bottom: 0;
-      left: 0;
-      border-radius: 0;
+      right: 0;
       backdrop-filter: blur(0.5rem);
     }
 
@@ -49,7 +47,7 @@
       @include grid(center);
 
       a {
-        width: 80%;
+        width: 100%;
         display: block;
         padding: 0.75rem 1.5rem;
         text-decoration: none;
@@ -66,7 +64,7 @@
           height: 0.0625rem;
           transform: translateY(0);
           background-color: $secondary-500;
-          transition: $transition-2;
+          transition: $transition;
         }
 
         &:hover::before {
@@ -118,7 +116,7 @@
 
   }
 }
-@media (min-width: $tablet) {
+@media (min-width: $largescreens) {
   .nav {
     flex-direction: row;
     padding: 2rem;

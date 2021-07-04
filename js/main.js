@@ -5,21 +5,7 @@ const btnOpen = document.getElementById('btnOpen');
 const btnClose = document.getElementById('btnClose');
 const btns = document.querySelectorAll('.hamburger .btn');
 let isOpen = false;
-let isActive = false;
 
-
-links.forEach(link =>{
-  link.classList.remove('active');
-  link.addEventListener('click', (e) =>{
-    if(!isActive){
-      e.target.classList.add('active');
-      isActive = true;
-    }else{
-      link.classList.remove('active');
-      isActive = false;
-    }
-  });
-})
 
 // === hamburger and menu activation ===
 btns.forEach(btn => {
