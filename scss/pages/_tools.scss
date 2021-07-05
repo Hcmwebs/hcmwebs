@@ -22,21 +22,17 @@
     }
   }
   &__body {
-    max-width: 1000px;
-    @include grid(center);
-
-    .tool{
-    width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap:1rem;
+    width: 70%;
     color: $secondary-500;
+    @include grid(center);
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap:1rem;
 
-      i{
-        @include grid(center);
-        transition: $transition-2;
-      }
+    span{
+      width: 7rem;
+      height: 7rem;
+      @include grid(center);
     }
-
 
 
 

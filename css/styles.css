@@ -564,20 +564,18 @@ ul {
   text-transform: initial;
 }
 .tools__body {
-  max-width: 1000px;
-  display: grid;
-  place-items: center;
-}
-.tools__body .tool {
-  width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
+  width: 70%;
   color: #e04e3e;
-}
-.tools__body .tool i {
   display: grid;
   place-items: center;
-  transition: all 0.6s ease-in-out;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+.tools__body span {
+  width: 7rem;
+  height: 7rem;
+  display: grid;
+  place-items: center;
 }
 
 .main {
