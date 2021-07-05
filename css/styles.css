@@ -582,14 +582,14 @@ ul {
 .main {
   width: 100%;
   min-height: 100vh;
-  padding: 2rem 0;
   display: grid;
   place-items: center;
   background-color: #1d8a96;
 }
 .main section {
   min-height: 50vh;
-  padding: 7rem 0;
+  padding-top: 7rem;
+  padding-bottom: 3rem;
 }
 
 .footer {
