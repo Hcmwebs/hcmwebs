@@ -4,9 +4,7 @@
 /* images */
 .imgContainer {
   width: 40vw;
-  max-width:$maxWidth;
-  // border: 5px solid $primary-500;
-  border-radius:$borderRadius;
+  max-width:$fixedWidth;
 
   .img{
     width: 100%;

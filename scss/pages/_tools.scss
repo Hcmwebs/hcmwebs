@@ -1,2 +1,53 @@
 @use '../abstracts/' as *;
-@use '../components/' as *;
+@use '../components/'as *;
+
+
+
+.tools {
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 0;
+  @include flex(column, center, center);
+  gap: 3rem;
+  background-color: $primary-100;
+
+  &__header {
+    padding: 0 3rem;
+
+    h4 {
+      font-size: clamp(1.5rem, 4vw, 3rem);
+      font-weight: $regular;
+      text-align: center;
+      text-transform: initial;
+    }
+  }
+  &__body {
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    @include grid(center);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap:1rem;
+
+    .tool {
+      @include grid(center);
+      gap: 2rem;
+      color: $secondary-500;
+
+
+
+      svg{
+        width: 8rem;
+        height: 8rem;
+        border: 1px solid $secondary-500;
+        border-radius: $borderRadius;
+        box-shadow: $shadow-1;
+        @include grid(center);
+        transition: $transition-2;
+        background-color: #fff;
+      }
+
+    }
+  }
+}
+

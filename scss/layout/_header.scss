@@ -3,7 +3,7 @@
 
 .header {
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   @include flex(column, center, center);
   background-color: $backgroundColor;
 
@@ -70,7 +70,7 @@
       }
 
       a {
-        font-weight: 300;
+        font-weight: $light;
         padding: 0.75rem 1.5rem;
         border-radius: $borderRadius;
         border: none;
@@ -92,7 +92,7 @@
 
       p {
         font-size: 1.7rem;
-        font-weight: 300;
+        font-weight: $light;
         transform: translateY(2rem);
         opacity: 0;
         animation: fadeInUp 2s ease $typewriterSpeed forwards;

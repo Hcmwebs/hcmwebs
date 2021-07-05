@@ -1,2 +1,47 @@
 @use '../abstracts/' as *;
 @use '../components/' as *;
+
+@use '../abstracts/'as *;
+
+.projects {
+  width: 100%;
+  @include grid(center);
+  gap: 0.625rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  border-radius: $borderRadius;
+  background-color: $backgroundColor;
+
+  &__item {
+    width: 90%;
+    max-width: 250px;
+    height: 9.4rem;
+    @include grid(center);
+    border-radius: $borderRadius;
+    box-shadow:$shadow-3;
+    cursor: pointer;
+    background-color: $primary-500;
+    transition: $transition-2;
+
+    &:hover,
+    &:focus {
+      box-shadow: $shadow-1;
+      transform: scale(1.1);
+      background-color: $primary-700;
+    }
+
+    a {
+      font-size: 1.125rem;
+      font-weight: $light;
+      width: 100%;
+      max-width: 250px;
+      cursor: pointer;
+      text-decoration: none;
+      color: $white;
+      padding: 2rem 3rem;
+      border: none;
+      text-align: center;
+      @include flex(row, space-between, center);
+      gap: 1.25rem;
+    }
+  }
+}

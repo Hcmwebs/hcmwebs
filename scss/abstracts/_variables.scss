@@ -19,11 +19,15 @@
 
 
   $borderRadius: 0.25rem;
+  $borderRadius-2: 50%;
 
   $letterSpacing: 1px;
-  $transition: 0.3s ease-in-out all;
   $maxWidth: 1440px;
-  $fixedWidth: 600px;
+  $fixedWidth: 500px;
+
+  $transition: 0.3s ease-in-out all;
+  $transition-2: all 0.6s ease-in-out;
+
 
   $typewriterSpeed: 4s;
   $typewriterCharacters: 15;

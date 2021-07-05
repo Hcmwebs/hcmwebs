@@ -1,52 +1,75 @@
 @use '../abstracts/' as *;
 @use '../components/' as *;
 
-.section--about{
+.about{
   width: 100%;
-  min-height:60vh;
-  background-color: $primary-300;
+  background-color: $primary-100;
   @include grid(center);
 
   .card{
-    width: 100%;
+    width:100%;
     padding: 2rem 0;
-    border-radius:$borderRadius;
-    background-color: $primary-100;
-    @include flex(column,space-between, center);
-    gap:2rem;
+    @include flex(column, space-between, center);
+    gap: 2rem;
 
     &__header{
-      width: 90%;
-      max-width:$fixedWidth;
-      min-height: 50vh;
       @include grid(center);
 
       .imgContainer{
-        width: 90%;
-        @include grid(center);
-
-
         .img{
-          border-radius: 50%;
-          border: 0.25rem solid $secondary-500;
+          border: 0.25rem solid $secondary-400;
+          border-radius:$borderRadius-2;
+        }
+
+      }
+    }
+
+    &__body{
+      @include grid(center);
+      p{
+        font-size: 1.125rem;
+        text-align: center;
+        padding: 2rem;
+        max-width: $fixedWidth;
+      }
+      a{
+        font-weight: $light;
+        padding: 0.75rem 1.5rem;
+        border-radius: $borderRadius;
+        border: none;
+        color: $white;
+        background-color: $secondary-500;
+        box-shadow: $shadow-1;
+        transition: $transition;
+
+        &:focus,
+        &:hover {
+          box-shadow: $shadow-2;
+          background-color: $secondary-600;
+          transform: scale(1.1);
         }
       }
 
-
     }
-    &__body{
-      width: 100%;
-      max-width:$fixedWidth;
-      min-height: 50vh;
 
-      p{
-        max-width: $fixedWidth;
-        margin-top: 1rem;
-        padding: 0 1rem;
-        text-align: center;
+  }
+}
+@media (min-width:$largescreens){
+  .about{
+
+    .card{
+      width: 1000px;
+      min-height:100%;
+      flex-direction: row;
+
+      &__body{
+
+        p{
+          text-align: justify;
+        }
       }
     }
   }
 
-}
 
+}
