@@ -3,14 +3,14 @@
 
 .header {
   width: 100%;
-  min-height: 80vh;
+  min-height: 100vh;
   @include flex(column, center, center);
   background-color: $backgroundColor;
 
   .heroText {
     width: 90%;
     max-width: $fixedWidth;
-    padding-top: 5rem;
+    padding-top: 7rem;
     padding-bottom: 3rem;
     border: none;
     border-radius: $borderRadius;
