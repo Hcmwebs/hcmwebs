@@ -10,7 +10,8 @@
   .heroText {
     width: 90%;
     max-width: $fixedWidth;
-    padding: 3rem 0rem;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
     border: none;
     border-radius: $borderRadius;
     @include flex(column, space-between, center);
