@@ -273,25 +273,27 @@ ul {
 /* forms */
 .form {
   width: 90vw;
-  max-width: 500px;
-  background-color: white;
+  max-width: 400px;
+  background-color: #1d8a96;
   border-radius: 0.25rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  padding: 2rem 2.5rem;
-  margin: 3rem auto;
+  padding: 1.25rem 1.6rem;
+  margin: 1.875rem auto;
 }
 
 .form-label {
   display: block;
-  font-size: 0.7em;
-  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  margin-bottom: 0.3125rem;
   text-transform: capitalize;
   letter-spacing: 1px;
+  color: white;
 }
 
 .form-input,
 .form-textarea {
   width: 100%;
+  font-size: 1.125rem;
   padding: 0.375rem 0.75rem;
   border-radius: 0.25rem;
   background: white;
@@ -299,11 +301,11 @@ ul {
 }
 
 .form-control {
-  margin-bottom: 1rem;
+  margin-bottom: 0.625rem;
 }
 
 .form-textarea {
-  height: 7rem;
+  height: 6rem;
 }
 
 ::placeholder {
@@ -312,6 +314,7 @@ ul {
 }
 
 .form-alert {
+  font-size: 0.7em;
   color: #b33f32;
   letter-spacing: 1px;
   text-transform: capitalize;
@@ -423,9 +426,9 @@ ul {
   animation: fadeInUp 2s ease 13s forwards;
 }
 .header .heroText .subtitle a:focus, .header .heroText .subtitle a:hover {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   background-color: #b33f32;
-  transform: scale(1.1);
+  transform: scale(0.95);
 }
 .header .heroText .subtitle p {
   font-size: 1.7rem;
@@ -485,9 +488,9 @@ ul {
   transition: 0.3s ease-in-out all;
 }
 .about .card__body a:focus, .about .card__body a:hover {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   background-color: #b33f32;
-  transform: scale(1.1);
+  transform: scale(0.95);
 }
 
 @media (min-width: 1024px) {
@@ -522,7 +525,7 @@ ul {
   transition: all 0.6s ease-in-out;
 }
 .projects__item:hover, .projects__item:focus {
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   transform: scale(1.1);
   background-color: #11535a;
 }
@@ -577,6 +580,28 @@ ul {
   height: 7rem;
   display: grid;
   place-items: center;
+}
+
+.contact {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background-color: white;
+}
+.contact .card {
+  width: 100vw;
+  max-width: 400px;
+}
+.contact .card .btn {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: white;
+  background-color: #e04e3e;
+}
+.contact .card .btn:focus, .contact .card .btn:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  background-color: #b33f32;
+  transform: scale(0.95);
 }
 
 .main {

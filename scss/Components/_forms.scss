@@ -1,25 +1,27 @@
 @use '../abstracts' as *;
-
 /* forms */
 .form {
   width: 90vw;
-  max-width: $fixedWidth;
-  background-color: $backgroundColor;
+  max-width: 400px;
+  background-color: $primary-500;
   border-radius: $borderRadius;
   box-shadow: $shadow-2;
-  padding: 2rem 2.5rem;
-  margin: 3rem auto;
+  padding: 1.25rem 1.6rem;
+  margin: 1.875rem auto;
 }
+
 .form-label {
   display: block;
-  font-size: $smallText;
-  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  margin-bottom: 0.3125rem;
   text-transform: capitalize;
   letter-spacing: $letterSpacing;
+  color: $white;
 }
 .form-input,
 .form-textarea {
   width: 100%;
+  font-size: 1.125rem;
   padding: 0.375rem 0.75rem;
   border-radius: $borderRadius;
   background: $backgroundColor;
@@ -27,17 +29,18 @@
 }
 
 .form-control {
-  margin-bottom: 1rem;
+  margin-bottom: 0.625rem;
 }
 
 .form-textarea {
-  height: 7rem;
+  height: 6rem;
 }
 ::placeholder {
   font-family: inherit;
   color: $grey-400;
 }
 .form-alert {
+  font-size:$smallText;
   color: $error;
   letter-spacing: $letterSpacing;
   text-transform: capitalize;

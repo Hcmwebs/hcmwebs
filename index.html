@@ -162,8 +162,31 @@
           </div>
 
         </section>
-        <section class = 'contact' id = 'contacts'>
-          <h1>Contacts</h1>
+        <section class = 'contact' id = 'contact'>
+            <div class="card">
+              <h2 class="title">Reach me out</h2>
+              <div class="title-underline"></div>
+              <form action="" class="form" id="form">
+                <div class="form-control">
+                  <label for="fullname" class="form-label">Fullname :</label>
+                  <input type="text" id="fullname" class="form-input" name="fullname" placeholder="Fullname">
+                  <small class="smalltext form-alert">error message</small>
+                </div>
+                <div class="form-control">
+                  <label for="email" class="form-label">Email :</label> </label>
+                  <input type="email" id="email"  class="form-input" name="email" placeholder="email@example.com">
+                  <small class="smalltext form-alert">error message</small>
+                </div>
+                <div class="form-control">
+                  <label for="comments" class="form-label">Comments : </label>
+                  <textarea name="comments" id="comments" class="form-textarea" placeholder="Please write your comment here">
+                  </textarea>
+                  <small class="smalltext form-alert">error message</small>
+                </div>
+                <button class="btn btn-block" id="submit" type="submit">Submit</button>
+
+              </form>
+            </div>
         </section>
       </main>
       <footer class = 'footer'>
