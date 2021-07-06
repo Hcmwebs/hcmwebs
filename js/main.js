@@ -5,6 +5,18 @@ const btnOpen = document.getElementById('btnOpen');
 const btnClose = document.getElementById('btnClose');
 const btns = document.querySelectorAll('.hamburger .btn');
 let isOpen = false;
+const currentLocation = location.href;
+
+
+// === adding active class to the links ===
+
+for(let i = 0; i < links.length; i++){
+  if(links[i]=== currentLocation){
+    links[i].className = 'active';
+  };
+}
+
+
 
 
 // === hamburger and menu activation ===
