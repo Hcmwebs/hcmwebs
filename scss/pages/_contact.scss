@@ -1,2 +1,27 @@
 @use '../abstracts/' as *;
 @use '../components/' as *;
+
+.contact{
+  width: 100%;
+  @include grid(center);
+  background-color: $backgroundColor;
+
+  .card{
+    width: 100vw;
+    max-width: 400px;
+
+    .btn{
+      font-size: 1.25rem;
+      font-weight: $light;
+      color:$white;
+      background-color: $secondary-500;
+
+      &:focus,
+      &:hover {
+        box-shadow: $shadow-3;
+        background-color: $secondary-600;
+        transform: scale(0.95);
+      }
+    }
+  }
+}
