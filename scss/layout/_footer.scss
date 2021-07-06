@@ -3,29 +3,30 @@
 
 .footer {
   width: 100%;
-  min-height: 2vh;
+  margin-top: 3rem;
+  padding: 1rem 0;
   position: fixed;
   bottom: 0;
   @include grid(center);
-  background-color: $backgroundColor;
+  background-color: $primary-800;
 
   &__links {
     width: 80%;
     max-width: 400px;
     @include flex(row, center, center);
-    gap: 1rem;
+    gap: 0.6rem;
 
     a {
       cursor: pointer;
+      color: $white;
       border-radius: $borderRadius;
       @include grid(center);
-      transition: all 0.6s ease-in-out;
+      transition: $transition-2;
 
       &:hover {
-        color: $textColor;
-        background-color: darken($backgroundColor, 5);
-        box-shadow: $shadow-2;
-        transform: scale(1.1);
+        color: $grey-200;
+        box-shadow: $shadow-3;
+        transform: scale(0.95);
       }
     }
   }
