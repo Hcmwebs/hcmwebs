@@ -613,6 +613,7 @@ ul {
 }
 .main section {
   min-height: 50vh;
+  margin: 3rem auto;
   padding-top: 7rem;
   padding-bottom: 3rem;
 }
@@ -620,7 +621,6 @@ ul {
 .footer {
   width: 100%;
   min-height: 2vh;
-  padding: 3rem 0;
   position: fixed;
   bottom: 0;
   display: grid;
