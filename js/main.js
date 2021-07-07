@@ -5,15 +5,21 @@ const btnOpen = document.getElementById('btnOpen');
 const btnClose = document.getElementById('btnClose');
 const btns = document.querySelectorAll('.hamburger .btn');
 let isOpen = false;
-const currentLocation = location.href;
 
 
 // === adding active class to the links ===
 
 for(let i = 0; i < links.length; i++){
-  if(links[i]=== currentLocation){
-    links[i].className = 'active';
-  };
+  links[i].addEventListener('click', () => {
+    let current = document.getElementsByClassName('active');
+    if(current.length > 0){
+      current[0].className = current[0].className.replace('active', '');
+
+    }
+    this.className += 'active';
+
+  });
+
 }
 
 
