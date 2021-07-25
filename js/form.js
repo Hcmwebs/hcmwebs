@@ -2,6 +2,7 @@ const form = document.getElementById('form');
 const fullname = document.getElementById('fullname');
 const email = document.getElementById('email');
 const comments = document.getElementById('comments');
+const inputs = document.querySelectorAll('.form-input')
 let errors = [];
 
 const setErrorFor = (input, err) => {
@@ -21,6 +22,10 @@ const isEmail = email => {
     email
   );
 };
+
+const resetInputs = () => {
+  inputs.forEach(input => input.value = '');
+}
 
 const formValidation = () => {
   const fullnameValue = fullname.value.trim();
@@ -44,10 +49,15 @@ const formValidation = () => {
   } else {
     setSuccessFor(comments);
   }
-  
+
+  if(errors.length === 0) {
+    resetInputs();
+  }
+
 };
 
 form.addEventListener('submit', e => {
   e.preventDefault();
   formValidation();
+
 });

@@ -296,6 +296,7 @@ ul {
   background: white;
   border: 2px solid transparent;
   outline: none;
+  text-align: left;
 }
 
 .form-control {
