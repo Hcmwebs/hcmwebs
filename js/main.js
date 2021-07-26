@@ -9,13 +9,13 @@ let isOpen = false;
 
 // === adding active class to the links ===
 
-for(let i = 0; i < links.length; i++){
-  links[i].addEventListener('click', () => {
-    let current = document.getElementsByClassName("active");
-  current[0].className = current[0].className.replace(" active", "");
-  this.className += " active";
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    navBar.querySelector('.active').classList.remove('active');
+    link.classList.add('active');
   });
-}
+})
+
 
 // === hamburger and menu activation ===
 btns.forEach(btn => {
@@ -35,7 +35,7 @@ btns.forEach(btn => {
       isOpen = false;
     }
   });
-}),
+})
 
 // === menu de-activation ===
 
