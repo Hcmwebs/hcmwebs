@@ -12,7 +12,7 @@ let isOpen = false;
 for(let i = 0; i < links.length; i++){
   links[i].addEventListener('click', () => {
     let current = document.getElementsByClassName('active');
-    current[0].className = current[0].className.replace(' active', '');
+    current[0].className = current[0].className.replace('active', '');
 
     this.className += ' active';
   });
@@ -34,6 +34,8 @@ btns.forEach(btn => {
       hamburger.classList.remove('open');
       btnClose.style.display = 'none'
       btnOpen.style.display = 'block';
+      navBar.classList.remove ('open');
+      isOpen = false;
     }
   });
 })
@@ -43,5 +45,7 @@ btns.forEach(btn => {
 
 navBar.addEventListener('click', () => {
   navBar.classList.remove ('open');
+  btnOpen.style.display = 'block';
+  btnClose.style.display = 'none';
   isOpen = false;
 })

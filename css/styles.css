@@ -631,8 +631,9 @@ ul {
   margin-bottom: 10rem;
 }
 .main section {
-  min-height: 50vh;
+  min-height: 100vh;
   margin: 5rem auto;
+  padding: 7rem 0;
 }
 
 .footer {
