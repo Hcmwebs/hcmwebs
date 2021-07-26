@@ -627,13 +627,12 @@ ul {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background-color: #1d8a96;
+  gap: 10rem;
+  margin-bottom: 10rem;
 }
 .main section {
   min-height: 50vh;
-  margin: 3rem auto;
-  padding-top: 7rem;
-  padding-bottom: 3rem;
+  margin: 5rem auto;
 }
 
 .footer {
@@ -644,7 +643,7 @@ ul {
   bottom: 0;
   display: grid;
   place-items: center;
-  background-color: #0b373c;
+  background-color: #156b74;
 }
 .footer__links {
   width: 80%;
@@ -680,6 +679,7 @@ ul {
   max-width: 1440px;
   display: grid;
   place-items: center;
+  gap: 5rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
