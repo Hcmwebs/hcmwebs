@@ -1,4 +1,4 @@
-const links = document.querySelectorAll('.navBar > li > a')
+const links = document.querySelectorAll('.navBar > li > a');
 const navBar = document.getElementById('navBar');
 const hamburger = document.getElementById('hamburger');
 const btnOpen = document.getElementById('btnOpen');
@@ -11,14 +11,11 @@ let isOpen = false;
 
 for(let i = 0; i < links.length; i++){
   links[i].addEventListener('click', () => {
-    let current = document.getElementsByClassName('active');
-    current[0].className = current[0].className.replace('active', '');
-
-    this.className += ' active';
+    let current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
   });
-
 }
-
 
 // === hamburger and menu activation ===
 btns.forEach(btn => {
@@ -38,13 +35,13 @@ btns.forEach(btn => {
       isOpen = false;
     }
   });
-})
+}),
 
 // === menu de-activation ===
 
 
 navBar.addEventListener('click', () => {
-  navBar.classList.remove ('open');
+  navBar.classList.remove('open');
   btnOpen.style.display = 'block';
   btnClose.style.display = 'none';
   isOpen = false;
