@@ -34,10 +34,14 @@ btns.forEach(btn => {
       hamburger.classList.remove('open');
       btnClose.style.display = 'none'
       btnOpen.style.display = 'block';
-      navBar.classList.remove ('open');
-      isOpen = false;
-
     }
   });
 })
 
+// === menu de-activation ===
+
+
+navBar.addEventListener('click', () => {
+  navBar.classList.remove ('open');
+  isOpen = false;
+})
