@@ -8,7 +8,7 @@
   position: fixed;
   bottom: 0;
   @include grid(center);
-  background-color: $primary-800;
+  background-color:$primary-600;
 
   &__links {
     width: 80%;
