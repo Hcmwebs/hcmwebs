@@ -10,4 +10,5 @@
   width: 100%;
   max-width:$maxWidth;
   @include grid(center);
+  gap:5rem;
 }
