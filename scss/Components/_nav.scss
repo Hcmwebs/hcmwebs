@@ -30,28 +30,34 @@
     right:-100%;
     @include flex(column,center,center);
     gap:0.25rem;
-    transition: $transition;
+    transition: $transition-2;
     background-color: $primary-500;
 
 
     &.open {
       bottom: 0;
       right: 0;
-      backdrop-filter: blur(0.5rem);
     }
 
     li {
-      width: 100%;
+      width: 90%;
       font-weight: 300;
       font-size: 1.125rem;
       text-align: center;
       @include grid(center);
+      gap: 0.2rem;
+      transition: $transition-2;
+
+      &:hover{
+        border-radius: $borderRadius;
+        box-shadow: $shadow-1;
+        background-color: $secondary-500;
+      }
 
 
       a {
         width: 100%;
         display: block;
-        margin: 0.2rem;
         padding: 0.75rem 1.5rem;
         text-decoration: none;
         color: $white;
