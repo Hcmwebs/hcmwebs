@@ -3,7 +3,14 @@
 
 @use '../abstracts/'as *;
 
+
+
 .projects {
+  width:100%;
+  @include flex(column, space-between, center);
+  gap:5rem;
+
+  &__body {
   width: 100%;
   @include grid(center);
   gap: 0.625rem;
@@ -11,7 +18,7 @@
   border-radius: $borderRadius;
   background-color: $backgroundColor;
 
-  &__item {
+  .projects__item {
     width: 90%;
     max-width: 250px;
     height: 9.4rem;
@@ -44,4 +51,7 @@
       gap: 1.25rem;
     }
   }
+
+  }
+
 }
