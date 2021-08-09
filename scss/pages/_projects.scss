@@ -7,7 +7,7 @@
 
 .projects {
   width:100%;
-  @include flex(column, space-between, center);
+  @include flex(column, center, center);
   gap:5rem;
 
   &__body {
