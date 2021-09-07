@@ -2,7 +2,6 @@ const form = document.getElementById('form');
 const fullname = document.getElementById('fullname');
 const email = document.getElementById('email');
 const comments = document.getElementById('comments');
-const inputs = document.querySelectorAll('.form-input')
 let errors = [];
 
 const setErrorFor = (input, err) => {
@@ -24,7 +23,7 @@ const isEmail = email => {
 };
 
 const resetInputs = () => {
-  inputs.forEach(input => input.value = '');
+  form.reset();
 }
 
 const formValidation = () => {
