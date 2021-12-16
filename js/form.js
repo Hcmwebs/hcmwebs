@@ -24,6 +24,12 @@ const isEmail = email => {
 
 const resetInputs = () => {
   form.reset();
+  setTimeout(()=>{
+    const formControl = form.querySelectorAll('.form-control');
+    formControl.forEach(item =>item.className = 'form-control');
+    window.location = 'index.html';
+  }, 5000);
+
 };
 
 const formValidation = () => {
@@ -51,7 +57,7 @@ const formValidation = () => {
 
   if (errors.length > 0) {
     alert(errors);
-    resetInputs();
+
   } else {
     Email.send({
       SecureToken: 'C973D7AD-F097-4B95-91F4-40ABC5567812',
@@ -66,11 +72,14 @@ const formValidation = () => {
         '<br /> Comments: ' +
         comments.value.trim(),
     }).then(message => alert('Thank you very much for contacting us.'));
-    resetInputs();
   }
+
 };
 
 form.addEventListener('submit', e => {
   e.preventDefault();
   formValidation();
+  resetInputs();
+
+
 });
