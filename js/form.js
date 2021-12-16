@@ -18,13 +18,13 @@ const setSuccessFor = input => {
 
 const isEmail = email => {
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-    email
+    email,
   );
 };
 
 const resetInputs = () => {
   form.reset();
-}
+};
 
 const formValidation = () => {
   const fullnameValue = fullname.value.trim();
@@ -49,14 +49,28 @@ const formValidation = () => {
     setSuccessFor(comments);
   }
 
-  if(errors.length === 0) {
+  if (errors.length > 0) {
+    alert(errors);
+    resetInputs();
+  } else {
+    Email.send({
+      SecureToken: 'C973D7AD-F097-4B95-91F4-40ABC5567812',
+      To: 'hcmwebs@hcmwebs.com',
+      From: email.value,
+      Subject: 'New contact from Web',
+      Body:
+        'Name: ' +
+        fullname.value.trim() +
+        '<br /> Email: ' +
+        email.value.trim() +
+        '<br /> Comments: ' +
+        comments.value.trim(),
+    }).then(message => alert('Thank you very much for contacting us.'));
     resetInputs();
   }
-
 };
 
 form.addEventListener('submit', e => {
   e.preventDefault();
   formValidation();
-
 });
