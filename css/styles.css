@@ -660,6 +660,8 @@ ul {
   display: grid;
   place-items: center;
   background-color: #156b74;
+  position: fixed;
+  bottom: 0;
 }
 .footer__links {
   width: 80%;

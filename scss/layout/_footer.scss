@@ -6,7 +6,9 @@
   min-height: 6rem;
   padding: 1rem 0;
   @include grid(center);
-  background-color:$primary-600;
+  background-color: $primary-600;
+  position: fixed;
+  bottom: 0;
 
   &__links {
     width: 80%;
