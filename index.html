@@ -203,7 +203,7 @@
           <div class="card">
             <h2 class="title">Reach me out</h2>
             <div class="title-underline"></div>
-            <form action="contact.html" method="post" class="form" id="form">
+            <form action="https://formsubmit.co/hcmwebs@hcmwebs.com" method="post" class="form" id="form">
               <div class="form-control">
                 <label for="fullname" class="form-label">Fullname :</label>
                 <input
@@ -237,6 +237,12 @@
                 </textarea>
                 <small class="smalltext form-alert">error message</small>
               </div>
+
+                <input type="hidden" name="_next" value="https://hcmwebs.com/pages/thankyou.html">
+
+                <input type="hidden" name="_subject" value="New submission from the web-form!">
+                <input type="hidden" name="_captcha" value="false">
+
               <button
                 class="btn btn-block"
                 id="submit"
@@ -271,7 +277,7 @@
         </div>
       </footer>
     </div>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
     <script src="js/form.js"></script>
     <script src="js/main.js"></script>
   </body>

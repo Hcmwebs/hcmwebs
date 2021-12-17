@@ -54,23 +54,23 @@ const formValidation = () => {
     setSuccessFor(comments);
   }
 
-  if (errors.length > 0) {
-    alert(errors);
-  } else {
-    Email.send({
-      SecureToken: 'C973D7AD-F097-4B95-91F4-40ABC5567812',
-      To: 'hcmwebs@hcmwebs.com',
-      From: email.value,
-      Subject: 'New contact from Web',
-      Body:
-        'Name: ' +
-        fullname.value.trim() +
-        '<br /> Email: ' +
-        email.value.trim() +
-        '<br /> Comments: ' +
-        comments.value.trim(),
-    }).then(message => alert('Thank you very much for contacting us.'));
-  }
+  // if (errors.length > 0) {
+  //   alert(errors);
+  // } else {
+  //   Email.send({
+  //     SecureToken: 'C973D7AD-F097-4B95-91F4-40ABC5567812',
+  //     To: 'hcmwebs@hcmwebs.com',
+  //     From: email.value,
+  //     Subject: 'New contact from Web',
+  //     Body:
+  //       'Name: ' +
+  //       fullname.value.trim() +
+  //       '<br /> Email: ' +
+  //       email.value.trim() +
+  //       '<br /> Comments: ' +
+  //       comments.value.trim(),
+  //   }).then(message => alert('Thank you very much for contacting us.'));
+  // }
 };
 
 form.addEventListener('submit', e => {
